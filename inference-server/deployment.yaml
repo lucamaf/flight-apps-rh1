@@ -23,6 +23,9 @@ spec:
         - name: TERM
           value: xterm
         image: osbuild.lmf.openshift.es:5000/gitea/object-inference-server:v1-arm
+        resources:
+          limits:
+            nvidia.com/gpu: 1
         name: object-detection-inference-server
         ports:
         - containerPort: 8080
